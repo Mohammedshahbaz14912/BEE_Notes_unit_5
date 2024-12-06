@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformer Concepts and Calculations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transformer Concepts and Calculations</h1>
+
+    <h2>Q1: What is a Transformer? How does it transfer electrical energy from one circuit to another?</h2>
+    <p><strong>What is a Transformer?</strong><br>
+    A transformer is an electrical device used to transfer electrical energy between two or more circuits through electromagnetic induction. It is primarily used to either step up (increase) or step down (decrease) the voltage level in alternating current (AC) electrical systems. Transformers operate on the principle of electromagnetic induction and are essential components in power distribution and transmission systems.</p>
+
+    <h3>How Does a Transformer Transfer Electrical Energy?</h3>
+    <p>The working principle of a transformer is based on Faraday's Law of Induction and electromagnetic induction. Here's how it works:</p>
+    <ul>
+        <li><strong>Basic Structure of a Transformer:</strong> A typical transformer consists of the following components:
+            <ul>
+                <li><strong>Primary Coil (Winding):</strong> The coil connected to the input power source, where the electrical energy is fed into the transformer.</li>
+                <li><strong>Secondary Coil (Winding):</strong> The coil connected to the load, where the transformed (stepped up or stepped down) voltage is delivered.</li>
+                <li><strong>Core:</strong> The transformer core, usually made of laminated iron, serves as a medium to transfer magnetic flux between the primary and secondary windings.</li>
+            </ul>
+        </li>
+        <li><strong>Electromagnetic Induction Process:</strong> When an alternating current (AC) flows through the primary coil, it creates a time-varying magnetic field around the coil. The varying magnetic flux passes through the core and also links the secondary coil. According to Faraday's Law of Induction, a changing magnetic flux induces a voltage in the secondary coil.</li>
+        <li><strong>Voltage Transformation:</strong> The induced voltage in the secondary coil depends on the number of turns (loops) in the primary and secondary windings. The relationship between the voltages and the number of turns in each coil is given by the turns ratio:
+            <pre>Vprimary / Vsecondary = Nprimary / Nsecondary</pre>
+        </li>
+        <li><strong>Current Transformation:</strong> The transformer also transforms the current. Assuming an ideal transformer, the power input to the primary coil is equal to the power output from the secondary coil. The current in the secondary coil will change inversely with the voltage. This relationship is given by:
+            <pre>Iprimary / Isecondary = Nsecondary / Nprimary</pre>
+        </li>
+    </ul>
+
+    <h2>Q2: Derive the expression for the E.M.F equation of a single-phase transformer.</h2>
+    <p>Let's derive the expression for the EMF equation of a single-phase transformer from fundamentals.</p>
+    <ul>
+        <li>The magnetic flux linking the primary coil is given by: <pre>Φ = Φ₀ sin(ωt)</pre></li>
+        <li>The induced EMF in the primary coil is given by Faraday's law of induction:
+            <pre>E₁ = -N₁(dΦ/dt) = -N₁(ωΦ₀ cos(ωt))</pre>
+        </li>
+        <li>The maximum value of the EMF is: <pre>E₁₀ = N₁ωΦ₀</pre></li>
+        <li>The EMF induced in the secondary coil is: <pre>E₂₀ = N₂ωΦ₀</pre></li>
+        <li>The turns ratio is: <pre>a = N₂ / N₁</pre></li>
+        <li>The relationship between the primary and secondary EMF is: <pre>E₂₀ / E₁₀ = N₂ / N₁ = a</pre></li>
+    </ul>
+    <p>The EMF equation of a single-phase transformer can be written as:</p>
+    <pre>E₁₀ = 4.44fN₁Φ₀</pre>
+    <pre>E₂₀ = 4.44fN₂Φ₀</pre>
+    <p>Where <strong>f</strong> is the frequency of the supply.</p>
+
+    <h2>Q3: A single-phase transformer with a 2 kVA rating has 480 V primary and a 120 V secondary.</h2>
+    <p>Given:</p>
+    <ul>
+        <li>Rating = 2 kVA = 2000 VA</li>
+        <li>Primary voltage (V₁) = 480 V</li>
+        <li>Secondary voltage (V₂) = 120 V</li>
+    </ul>
+    <p>We can calculate the primary and secondary currents:</p>
+    <pre>I₁ = 2000 / 480 ≈ 4.17 A</pre>
+    <pre>I₂ = 2000 / 120 ≈ 16.67 A</pre>
+    <p>The turns ratio (a) is:</p>
+    <pre>a = V₂ / V₁ = 120 / 480 = 1/4</pre>
+    <p>Thus, the secondary has 1/4 the number of turns as the primary.</p>
+
+    <h2>Q4: Define and explain efficiency and regulation of a transformer.</h2>
+    <h3>Efficiency of a Transformer</h3>
+    <p>The efficiency of a transformer refers to the ratio of the useful power output to the total power input, typically expressed as a percentage. It indicates how effectively the transformer converts input electrical power to output electrical power, with minimal losses.</p>
+    <p>The formula for efficiency is:</p>
+    <pre>η (%) = (Pout / Pin) × 100</pre>
+    <p>Where <strong>Pout</strong> is the output power and <strong>Pin</strong> is the input power.</p>
+
+    <h3>Regulation of a Transformer</h3>
+    <p>Voltage regulation refers to the change in the output voltage when the load on the transformer varies from full-load to no-load, while keeping the input voltage constant.</p>
+    <p>The formula for voltage regulation is:</p>
+    <pre>Voltage Regulation (%) = (Vno-load - Vfull-load) / Vfull-load × 100</pre>
+
+    <h2>Q5: Determine the efficiency of a single-phase 150 kVA transformer at 50% full load and 0.8 power factor lag if the copper loss at full load is 1600 watts and iron loss is 1400 watts.</h2>
+    <p>Given:</p>
+    <ul>
+        <li>Transformer rating = 150 kVA</li>
+        <li>Load = 50% of full load = 0.5 × 150 kVA = 75 kVA</li>
+        <li>Power factor (cosφ) = 0.8 (lagging)</li>
+        <li>Copper loss at full load (Pc) = 1600 W</li>
+        <li>Iron loss (Pi) = 1400 W</li>
+    </ul>
+    <p>First, calculate the copper loss at 50% load:</p>
+    <pre>Pc_50% = (0.5)² × 1600 = 400 W</pre>
+    <p>Total loss:</p>
+    <pre>Total loss = 400 + 1400 = 1800 W</pre>
+    <p>Output power:</p>
+    <pre>Pout = 75 × 0.8 = 60 kW = 60,000 W</pre>
+    <p>Efficiency calculation:</p>
+    <pre>η (%) = (60,000 / (60,000 + 1800)) × 100 ≈ 97.1%</pre>
+    <p>The efficiency of the transformer at 50% full load and 0.8 power factor lag is approximately 97.1%.</p>
+
+</body>
+</html>
